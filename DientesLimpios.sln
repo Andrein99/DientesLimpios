@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{8B22FC3F-EACF-418A-B4A4-ED6485555CB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructura", "Infraestructura", "{ABEBBF0B-6D76-49B9-B262-9077A0E6901B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pruebas", "Pruebas", "{B2071051-74A1-4FFD-AD46-7648A4073FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DientesLimpios.Dominio", "DientesLimpios.Dominio\DientesLimpios.Dominio.csproj", "{BA6B8951-C77B-4259-B887-2CA88202C5FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DientesLimpios.Pruebas", "DientesLimpios.Pruebas\DientesLimpios.Pruebas.csproj", "{84026355-5211-4506-AED9-00AEA3F0EE1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA6B8951-C77B-4259-B887-2CA88202C5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6B8951-C77B-4259-B887-2CA88202C5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6B8951-C77B-4259-B887-2CA88202C5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6B8951-C77B-4259-B887-2CA88202C5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84026355-5211-4506-AED9-00AEA3F0EE1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84026355-5211-4506-AED9-00AEA3F0EE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84026355-5211-4506-AED9-00AEA3F0EE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84026355-5211-4506-AED9-00AEA3F0EE1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA6B8951-C77B-4259-B887-2CA88202C5FF} = {8B22FC3F-EACF-418A-B4A4-ED6485555CB5}
+		{84026355-5211-4506-AED9-00AEA3F0EE1A} = {B2071051-74A1-4FFD-AD46-7648A4073FFD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40D2789C-BEEF-4018-9046-15EBD188BAB6}
+	EndGlobalSection
+EndGlobal
