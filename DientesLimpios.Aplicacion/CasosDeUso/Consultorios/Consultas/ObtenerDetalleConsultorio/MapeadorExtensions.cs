@@ -9,14 +9,14 @@ namespace DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Consultas.ObtenerDet
 {
     public static class MapeadorExtensions
     {
-        public static ConsultorioDetalleDTO ADto(this Consultorio consultorio) 
+        public static ConsultorioDetalleDTO ADto(this Consultorio consultorio) // Método de extensión para mapear una entidad Consultorio a un DTO ConsultorioDetalleDTO.
         {
             var dto = new ConsultorioDetalleDTO
             {
                 Id = consultorio.Id,
                 Nombre = consultorio.Nombre
             };
-            return dto;
+            return dto; // Retorna el DTO mapeado desde la entidad Consultorio.
         }
     }
 }
