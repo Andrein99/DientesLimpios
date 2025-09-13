@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DientesLimpios.Aplicacion.Utilidades.Mediador
 {
-    interface IMediator
+    public interface IMediator
     {
         Task<TResponse> Send<TResponse>(IRequest<TResponse> request);
 
