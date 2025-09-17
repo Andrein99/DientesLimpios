@@ -5,9 +5,23 @@ Accept: application/json
 
 ###
 
+GET {{DientesLimpios.API_HostAddress}}
+Accept: application/json
+
+###
+
 POST {{DientesLimpios.API_HostAddress}}
 Content-Type: application/json
 
 {
-  "nombre": "Consultorio A"
+  "nombre": "Consultorio B"
+}
+
+###
+
+PUT {{DientesLimpios.API_HostAddress}}/01994c2f-036d-765e-9840-224deb3b2371
+Content-Type: application/json
+
+{
+  "nombre": "Consultorio B - Actualizado"
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DientesLimpios.Aplicacion.Utilidades.Mediador
 {
-    public interface IRequest<TResponse>
+    public interface IRequest<TResponse> // Con respuesta
+    {
+
+    }
+
+    public interface IRequest // Sin respuesta
     {
 
     }
