@@ -1,4 +1,5 @@
 ﻿using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Comandos.ActualizarConsultorio;
+using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Comandos.BorrarConsultorio;
 using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Comandos.CrearConsultorio;
 using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Consultas.ObtenerDetalleConsultorio;
 using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Consultas.ObtenerListadoConsultorios;
@@ -17,13 +18,24 @@ namespace DientesLimpios.Aplicacion
         public static IServiceCollection AgregarServiciosDeAplicacion(this IServiceCollection services)
         {
             services.AddTransient<IMediator, MediadorSimple>();
-            services.AddScoped<IRequestHandler<ComandoCrearConsultorio, Guid>, 
-                                                CasoDeUsoCrearConsultorio>(); // Registro del caso de uso
-            services.AddScoped<IRequestHandler<ConsultaObtenerDetalleConsultorio, ConsultorioDetalleDTO>, 
-                                                CasoDeUsoObtenerDetalleConsultorio>(); // Registro del caso de uso
-            services.AddScoped<IRequestHandler<ConsultaObtenerListadoConsultorios, List<ConsultorioListadoDTO>>,
-                                                CasoDeUsoObtenerListadoConsultorios>(); // Registro del caso de uso
-            services.AddScoped<IRequestHandler<ComandoActualizarConsultorio>, CasoDeUsoActualizarConsultorio>(); // Registro del caso de uso
+
+            services.Scan(scan =>
+                scan.FromAssembliesOf(typeof(IMediator))
+                    .AddClasses(c => c.AssignableTo(typeof(IRequestHandler<>))) // Sin respuesta
+                    .AsImplementedInterfaces()
+                    .WithScopedLifetime()
+                    .AddClasses(c => c.AssignableTo(typeof(IRequestHandler<,>))) // Con respuesta
+                    .AsImplementedInterfaces()
+                    .WithScopedLifetime()); // Registro automático de todos los manejadores de solicitudes
+
+            //services.AddScoped<IRequestHandler<ComandoCrearConsultorio, Guid>, 
+            //                                    CasoDeUsoCrearConsultorio>(); // Registro del caso de uso
+            //services.AddScoped<IRequestHandler<ComandoActualizarConsultorio>, CasoDeUsoActualizarConsultorio>(); // Registro del caso de uso
+            //services.AddScoped<IRequestHandler<ComandoBorrarConsultorio>, CasoDeUsoBorrarConsultorio>(); // Registro del caso de uso
+            //services.AddScoped<IRequestHandler<ConsultaObtenerDetalleConsultorio, ConsultorioDetalleDTO>, 
+            //                                    CasoDeUsoObtenerDetalleConsultorio>(); // Registro del caso de uso
+            //services.AddScoped<IRequestHandler<ConsultaObtenerListadoConsultorios, List<ConsultorioListadoDTO>>,
+            //                                    CasoDeUsoObtenerListadoConsultorios>(); // Registro del caso de uso
             return services;
         }
     }
