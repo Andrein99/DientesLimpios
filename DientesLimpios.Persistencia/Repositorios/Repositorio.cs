@@ -35,6 +35,11 @@ namespace DientesLimpios.Persistencia.Repositorios
             return Task.CompletedTask;
         }
 
+        public async Task<int> ObtenerCantidadTotalRegistros() // Obtener la cantidad total de registros de una entidad.
+        {
+            return await context.Set<T>().CountAsync(); // Obtener la cantidad total de registros de una entidad
+        }
+
         public async Task<T?> ObtenerPorId(Guid id) // Obtener una entidad por su identificador único
         {
             return await context.Set<T>().FindAsync(id);

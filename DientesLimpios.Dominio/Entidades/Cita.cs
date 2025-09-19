@@ -16,10 +16,15 @@ namespace DientesLimpios.Dominio.Entidades
         public Guid DentistaId { get; private set; } // Identificador del dentista asociado a la cita
         public Guid ConsultorioId { get; private set; } // Identificador del consultorio donde se realizará la cita
         public EstadoCita Estado { get; private set; } // Estado actual de la cita (programada, completada, cancelada, etc.)
-        public IntervaloDeTiempo IntervaloDeTiempo { get; private set; } // Intervalo de tiempo de la cita
+        public IntervaloDeTiempo IntervaloDeTiempo { get; private set; } = null!; // Intervalo de tiempo de la cita
         public Paciente? Paciente { get; private set; } // Información del paciente asociado a la cita
         public Dentista? Dentista { get; private set; } // Información del dentista asociado a la cita
         public Consultorio? Consultorio { get; private set; } // Información del consultorio donde se realizará la cita
+
+        private Cita() // Constructor privado para EF Core
+        {
+
+        }
 
         public Cita(Guid pacienteId, Guid dentistaId, Guid consultorioId, IntervaloDeTiempo intervaloDeTiempo)
         {

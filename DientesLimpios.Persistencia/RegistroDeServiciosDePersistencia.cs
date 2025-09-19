@@ -19,6 +19,7 @@ namespace DientesLimpios.Persistencia
             services.AddDbContext<DientesLimpiosDbContext>(options => 
                 options.UseSqlServer("name=DientesLimpiosConnectionString")); // Configurar el DbContext con SQL Server
             services.AddScoped<IRepositorioConsultorios, RepositorioConsultorios>(); // Registrar el repositorio de consultorios
+            services.AddScoped<IRepositorioPacientes, RepositorioPacientes>(); // Registrar el repositorio de pacientes
             services.AddScoped<IUnidadDeTrabajo, UnidadDeTrabajoEFCore>(); // Registrar la unidad de trabajo
 
             return services;

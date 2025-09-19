@@ -14,6 +14,11 @@ namespace DientesLimpios.Dominio.Entidades
         public string Nombre { get; private set; } = null!; // Nombre del dentista
         public Email Email { get; private set; } = null!; // Correo electrónico del dentista
 
+        private Dentista() // Constructor privado para EF Core
+        {
+            
+        }
+
         public Dentista(string nombre, Email email) // Constructor que recibe el nombre y correo electrónico del dentista.
         {
             if (string.IsNullOrWhiteSpace(nombre)) // Validación básica para asegurar que el nombre no esté vacío.

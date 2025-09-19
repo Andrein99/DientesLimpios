@@ -11,6 +11,11 @@ namespace DientesLimpios.Dominio.ObjetosDeValor
     {
         public string Valor { get; } = null!; // Propiedad que almacena el valor del correo electrónico.
 
+        private Email() // Constructor privado para EF Core
+        {
+            
+        }
+
         public Email(string email)
         {
             if (string.IsNullOrWhiteSpace(email)) // Validación básica para asegurar que el correo electrónico no esté vacío.
