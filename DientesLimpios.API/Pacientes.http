@@ -14,20 +14,21 @@ POST {{DientesLimpios.API_HostAddress}}
 Content-Type: application/json
 
 {
-  "nombre": "Paciente B",
-  "email": "pacienteB@ejemplo.com"
+  "nombre": "Felipe Marrero",
+  "email": "felipe2@ejemplo.com"
 }
 
 ###
 
-PUT {{DientesLimpios.API_HostAddress}}/01994c2f-036d-765e-9840-224deb3b2371
+PUT {{DientesLimpios.API_HostAddress}}/01995fdd-01fa-7835-85ce-8c9aaa34dcd9
 Content-Type: application/json
 
 {
-  "nombre": "Paciente B - Actualizado"
+  "nombre": "Paciente B - Actualizado",
+  "email": "pacienteBActualizado@ejemplo.com"
 }
 
 ###
 
-DELETE {{DientesLimpios.API_HostAddress}}/01995b3a-f53a-714d-b07c-8cf5b3d8ff8e
+DELETE {{DientesLimpios.API_HostAddress}}/01995fa9-2044-795c-90b8-db721769cb86
 Accept: application/json

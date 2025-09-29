@@ -10,5 +10,7 @@ namespace DientesLimpios.Aplicacion.CasosDeUso.Pacientes.Consultas.ObtenerListad
     {
         public int Pagina { get; set; } = 1;
         public int RegistrosPorPagina { get; set; } = 10;
+        public string? Nombre { get; set; }
+        public string? Email { get; set; }
     }
 }
