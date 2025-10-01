@@ -9,7 +9,7 @@ namespace DientesLimpios.Aplicacion.CasosDeUso.Pacientes.Comandos.CrearPaciente
 {
     public class ComandoCrearPaciente : IRequest<Guid>
     {
-        public required string Nombre { get; set; }
-        public required string Email { get; set; }
+        public required string Nombre { get; set; } // Nombre del paciente
+        public required string Email { get; set; } // Email del paciente
     }
 }

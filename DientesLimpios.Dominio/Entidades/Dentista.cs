@@ -21,19 +21,42 @@ namespace DientesLimpios.Dominio.Entidades
 
         public Dentista(string nombre, Email email) // Constructor que recibe el nombre y correo electrónico del dentista.
         {
-            if (string.IsNullOrWhiteSpace(nombre)) // Validación básica para asegurar que el nombre no esté vacío.
-            {
-                throw new ExcepcionDeReglaDeNegocio($"El {nameof(nombre)} es obligatorio.");
-            }
-
-            if (email is null)
-            {
-                throw new ExcepcionDeReglaDeNegocio($"El {nameof(email)} es obligatorio.");
-            }
+            AplicarReglasDeNegocioNombre(nombre); // Aplica las reglas de negocio para validar el nombre.
+            AplicarReglasDeNegocioEmail(email); // Aplica las reglas de negocio para validar el email.
 
             Id = Guid.CreateVersion7(); // Genera un nuevo identificador único para el dentista con lógica secuencial para evitar fragmentación en la BBDD.
             Nombre = nombre; // Asigna el nombre del dentista.
             Email = email; // Asigna el correo electrónico del dentista.
+        }
+
+        public void ActualizarNombre(string nombre)
+        {
+            AplicarReglasDeNegocioNombre(nombre); // Aplica las reglas de negocio para validar el nombre.
+
+            Nombre = nombre; // Actualiza el nombre del dentista.
+        }
+
+        private void AplicarReglasDeNegocioNombre(string nombre)
+        {
+            if (string.IsNullOrWhiteSpace(nombre)) // Validación básica para asegurar que el nombre no esté vacío.
+            {
+                throw new ExcepcionDeReglaDeNegocio($"El {nameof(nombre)} es obligatorio.");
+            }
+        }
+
+        public void ActualizarEmail(Email email)
+        {
+            AplicarReglasDeNegocioEmail(email); // Aplica las reglas de negocio para validar el email.
+
+            Email = email; // Actualiza el correo electrónico del dentista.
+        }
+
+        private void AplicarReglasDeNegocioEmail(Email email)
+        {
+            if (email is null)
+            {
+                throw new ExcepcionDeReglaDeNegocio($"El {nameof(email)} es obligatorio.");
+            }
         }
     }
 }

@@ -1,0 +1,37 @@
+@DientesLimpios.API_HostAddress = http://localhost:5249/api/dentistas
+@DientesLimpios.GUID_ObtenerDentistaPorId = 0199a09a-555f-74c9-9163-b5cd952d314e
+@DientesLimpios.GUID_ActualizarDentistaPorId = 0199a09b-0f26-75ee-bced-d7fe9137953a
+@DientesLimpios.GUID_BorrarDentistaPorId = 0199a09b-2b5f-7f2e-9267-313b296d5e48
+
+GET {{DientesLimpios.API_HostAddress}}/{{DientesLimpios.GUID_ObtenerDentistaPorId}}
+Accept: application/json
+
+###
+
+GET {{DientesLimpios.API_HostAddress}}?pagina=1&registrosPorPagina=10
+Accept: application/json
+
+###
+
+POST {{DientesLimpios.API_HostAddress}}
+Content-Type: application/json
+
+{
+  "nombre": "Dentista C",
+  "email": "dentistaC@ejemplo.com"
+}
+
+###
+
+PUT {{DientesLimpios.API_HostAddress}}/{{DientesLimpios.GUID_ActualizarDentistaPorId}}
+Content-Type: application/json
+
+{
+  "nombre": "Dentista B - Actualizado",
+  "email": "dentistaBActualizado@ejemplo.com"
+}
+
+###
+
+DELETE {{DientesLimpios.API_HostAddress}}/{{DientesLimpios.GUID_BorrarDentistaPorId}}
+Accept: application/json

@@ -28,6 +28,7 @@ namespace DientesLimpios.Aplicacion
                     .AsImplementedInterfaces()
                     .WithScopedLifetime()); // Registro automático de todos los manejadores de solicitudes
 
+            // Registro manual de casos de uso (opcional si no se usa el escaneo automático). Usado como referencia por si no se quiere usar en otro contexto (No se actualizará porque se usará el escaneo automático).
             //services.AddScoped<IRequestHandler<ComandoCrearConsultorio, Guid>, 
             //                                    CasoDeUsoCrearConsultorio>(); // Registro del caso de uso
             //services.AddScoped<IRequestHandler<ComandoActualizarConsultorio>, CasoDeUsoActualizarConsultorio>(); // Registro del caso de uso
