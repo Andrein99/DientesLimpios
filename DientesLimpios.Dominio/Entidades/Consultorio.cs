@@ -1,4 +1,5 @@
-﻿using DientesLimpios.Dominio.Excepciones;
+﻿using DientesLimpios.Dominio.Comunes;
+using DientesLimpios.Dominio.Excepciones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DientesLimpios.Dominio.Entidades
 {
-    public class Consultorio
+    public class Consultorio : EntidadAuditable
     {
         public Guid Id { get; private set; } // Identificador único del consultorio
         public string Nombre { get; private set; } = null!; // Nombre del consultorio

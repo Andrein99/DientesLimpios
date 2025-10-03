@@ -1,4 +1,5 @@
-﻿using DientesLimpios.Dominio.Excepciones;
+﻿using DientesLimpios.Dominio.Comunes;
+using DientesLimpios.Dominio.Excepciones;
 using DientesLimpios.Dominio.ObjetosDeValor;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DientesLimpios.Dominio.Entidades
 {
-    public class Paciente
+    public class Paciente : EntidadAuditable
     {
         public Guid Id { get; private set; } // Identificador único del paciente
         public string Nombre { get; private set; } = null!; // Nombre completo del paciente

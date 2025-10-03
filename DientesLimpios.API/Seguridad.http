@@ -1,0 +1,22 @@
+@DientesLimpios.API_HostAddress = https://localhost:7279
+
+
+POST {{DientesLimpios.API_HostAddress}}/register
+Content-Type: application/json
+
+{
+  "email": "felipe@ejemplo.com",
+  "password": "aA123456!"
+}
+
+###
+
+POST {{DientesLimpios.API_HostAddress}}/login
+Content-Type: application/json
+
+{
+  "email": "felipe@ejemplo.com",
+  "password": "aA123456!"
+}
+
+###

@@ -5,12 +5,14 @@ using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Comandos.CrearConsultori
 using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Consultas.ObtenerDetalleConsultorio;
 using DientesLimpios.Aplicacion.CasosDeUso.Consultorios.Consultas.ObtenerListadoConsultorios;
 using DientesLimpios.Aplicacion.Utilidades.Mediador;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DientesLimpios.API.Controllers
 {
     [ApiController]
     [Route("api/consultorios")]
+    [Authorize] // Asegura que solo usuarios autenticados puedan acceder a los endpoints
     public class ConsultoriosController : ControllerBase
     {
         private readonly IMediator mediator;
