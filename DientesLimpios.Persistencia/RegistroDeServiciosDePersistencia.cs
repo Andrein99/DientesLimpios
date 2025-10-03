@@ -21,6 +21,7 @@ namespace DientesLimpios.Persistencia
             services.AddScoped<IRepositorioConsultorios, RepositorioConsultorios>(); // Registrar el repositorio de consultorios
             services.AddScoped<IRepositorioPacientes, RepositorioPacientes>(); // Registrar el repositorio de pacientes
             services.AddScoped<IRepositorioDentistas, RepositorioDentistas>(); // Registrar el repositorio de dentistas
+            services.AddScoped<IRepositorioCitas, RepositorioCitas>(); // Registrar el repositorio de citas
             services.AddScoped<IUnidadDeTrabajo, UnidadDeTrabajoEFCore>(); // Registrar la unidad de trabajo
 
             return services;

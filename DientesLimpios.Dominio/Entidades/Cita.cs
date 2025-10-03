@@ -51,7 +51,7 @@ namespace DientesLimpios.Dominio.Entidades
             Estado = EstadoCita.Cancelada; // Cambiar el estado de la cita a "Cancelada"
         }
 
-        public void Completada() // Método para completar la cita
+        public void Completar() // Método para completar la cita
         {
             if (Estado != EstadoCita.Programada) // Validar que la cita esté en estado "Programada" antes de permitir la cancelación
             {

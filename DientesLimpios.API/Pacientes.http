@@ -14,8 +14,8 @@ POST {{DientesLimpios.API_HostAddress}}
 Content-Type: application/json
 
 {
-  "nombre": "Felipe Marrero",
-  "email": "felipe2@ejemplo.com"
+  "nombre": "Usuario de prueba de correo",
+  "email": "usuario@ejemplo.com"
 }
 
 ###

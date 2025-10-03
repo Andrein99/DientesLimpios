@@ -1,0 +1,28 @@
+@DientesLimpios.API_HostAddress = http://localhost:5249/api/citas
+
+// Se puede filtrar también por consultorioId, dentistaId, y pacienteId.
+GET {{DientesLimpios.API_HostAddress}}?fechaInicio=2025-10-05&fechaFin=2027-01-01
+Accept: application/json
+
+###
+
+POST {{DientesLimpios.API_HostAddress}}
+Content-Type: application/json
+
+{
+  "pacienteId": "0199a7b1-3b2d-7bb6-89eb-1dc05e0a1837",
+  "dentistaId": "0199a09b-0f26-75ee-bced-d7fe9137953a",
+  "consultorioId": "01994024-76a2-73cf-8a04-fc5651a19a83",
+  "fechaInicio": "2025-11-06T14:30:00",
+  "fechaFin": "2025-11-06T15:00:00"
+}
+
+###
+
+POST {{DientesLimpios.API_HostAddress}}/0199A1C4-029A-7521-B094-2359D4264354/completar
+Accept: application/json
+
+###
+
+POST {{DientesLimpios.API_HostAddress}}/0199A36D-43C2-760F-8BB6-B0B724B7AD2B/cancelar
+Accept: application/json

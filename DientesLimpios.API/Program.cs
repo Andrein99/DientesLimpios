@@ -1,6 +1,8 @@
 using DientesLimpios.API.Middlewares;
 using DientesLimpios.Aplicacion;
 using DientesLimpios.Persistencia;
+using DientesLimpios.Infraestructura;
+using DientesLimpios.API.Jobs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +12,11 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AgregarServiciosDeAplicacion();
-builder.Services.AgregarServiciosDePersistencia();
+builder.Services.AgregarServiciosDeAplicacion(); // Extensión para agregar servicios de la capa de aplicación
+builder.Services.AgregarServiciosDePersistencia(); // Extensión para agregar servicios de la capa de persistencia
+builder.Services.AgregarServiciosDeInfraestructura(); // Extensión para agregar servicios de la capa de infraestructura
+
+builder.Services.AddHostedService<RecordatorioCitasJob>(); // Registro del servicio en segundo plano
 
 var app = builder.Build();
 

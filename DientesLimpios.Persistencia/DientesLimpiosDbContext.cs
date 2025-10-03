@@ -28,5 +28,6 @@ namespace DientesLimpios.Persistencia
         public DbSet<Consultorio> Consultorios { get; set; } // DbSet para la entidad Consultorio
         public DbSet<Paciente> Pacientes { get; set; } // DbSet para la entidad Paciente
         public DbSet<Dentista> Dentistas { get; set; } // DbSet para la entidad Dentista
+        public DbSet<Cita> Citas { get; set; } // DbSet para la entidad Cita
     }
 }

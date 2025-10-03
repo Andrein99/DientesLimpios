@@ -61,7 +61,7 @@ namespace DientesLimpios.Pruebas.Dominio.Entidades
         public void Completar_CitaProgramada_CambiaEstadoACompletada()
         {
             var cita = new Cita(_pacienteId, _dentistaId, _consultorioId, _intervalo);
-            cita.Completada();
+            cita.Completar();
             Assert.AreEqual(EstadoCita.Completada, cita.Estado);
         }
 
@@ -71,7 +71,7 @@ namespace DientesLimpios.Pruebas.Dominio.Entidades
         {
             var cita = new Cita(_pacienteId, _dentistaId, _consultorioId, _intervalo);
             cita.Cancelar();
-            cita.Completada();
+            cita.Completar();
         }
     }
 }
