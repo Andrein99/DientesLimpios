@@ -1,1 +1,3 @@
 # DientesLimpios
+Proyecto al estilo de WebAPI de ASP.NET Core usando Arquitectura Limpia para una empresa odontológica. Se utilizan pruebas con MSTest para hacer pruebas, además se siguen los principios SOLID para hacer la aplicación mantenible y escalable, y se añadió la funcionalidad que una vez agendada la cita se envíe un correo si se proporciona un correo y una contraseña para el servicio de Gmail. 
+Se manejan 4 entidades que responden a la lógica de negocio: Paciente, Dentista, Consultorio y Cita. Las consultas a la API están paginadas, se usa DTO para permitir tener un control preciso y una mantenibilidad sobre le información que proporciona la API. Se utiliza Identity para tener un control de acceso, usuarios y permisos. 
